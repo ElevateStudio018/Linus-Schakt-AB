@@ -16,3 +16,7 @@ Kontrollera uppgifterna med bolaget innan sidan publiceras.
 
 ## Publicera
 Lägg upp `index.html` på valfritt webbhotell, eller aktivera GitHub Pages (Settings → Pages → branch `master`, root).
+
+## Bilder
+Bilderna i `img/` är AI-genererade illustrationer (Higgsfield) och bör bytas mot riktiga foton
+på Linus Schakts maskiner och jobb innan sajten går live.
