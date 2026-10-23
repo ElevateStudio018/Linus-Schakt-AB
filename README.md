@@ -2,9 +2,6 @@
 
 En fristående webbsida (`index.html`, ingen build behövs) för Linus Schakt AB i Gråbo.
 
-**Koncept:** att scrolla är att gräva. En djupmätare räknar metrar medan du går nedåt genom
-markens lager (matjord → grus → lera → morän → berg). Sidan har den självsäkra tonen hos en koncern:
-en "Investor Relations"-sektion med riktiga nyckeltal, "affärsområden" och en arbetsorder-generator.
 
 ## Innehåll (från offentliga källor)
 - Org.nr 556863-1179, registrerat 2011-08-31, Lerums kommun
@@ -18,5 +15,8 @@ Kontrollera uppgifterna med bolaget innan sidan publiceras.
 Lägg upp `index.html` på valfritt webbhotell, eller aktivera GitHub Pages (Settings → Pages → branch `master`, root).
 
 ## Bilder
-Bilderna i `img/` är AI-genererade illustrationer (Higgsfield) och bör bytas mot riktiga foton
-på Linus Schakts maskiner och jobb innan sajten går live.
+Fotona i `img/` är fritt licensierade bilder från Wikimedia Commons och visar inte Linus Schakts egna jobb.
+Fotografer och licenser finns i `docs/DESIGN.md`. Byt mot egna foton innan sajten går live.
+
+## Design
+Se `docs/DESIGN.md` för reglerna sajten följer.
