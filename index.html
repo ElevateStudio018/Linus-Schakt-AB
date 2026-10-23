@@ -58,12 +58,12 @@ nav a:hover{color:var(--ink);text-decoration:underline}
 
 /* hero: statement on plain ground, then one dominant photo */
 .hero{padding-top:clamp(40px,7vw,96px)}
-.hero-text{display:grid;grid-template-columns:1.7fr 1fr;gap:48px;align-items:end}
+.hero-text{display:grid;gap:28px}
+.hero-sub{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 48px}
 .hero-text p{font-size:clamp(18px,1.6vw,21px);color:var(--ink-soft)}
-.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:28px}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
 .hero-photo{margin-top:clamp(40px,6vw,72px);height:clamp(320px,52vw,640px);background:var(--tone)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
-@media (max-width:860px){.hero-text{grid-template-columns:1fr;gap:20px}}
 
 /* services: sticky photo beside a plain list */
 .services{padding-block:var(--gap-section)}
@@ -158,7 +158,7 @@ footer{background:var(--night);color:var(--night-soft);font-size:15px;padding-bl
 <section class="hero">
   <div class="wrap hero-text">
     <h1>Schakt och markarbeten i Lerum</h1>
-    <div>
+    <div class="hero-sub">
       <p>Vi gräver för husgrunder, dränerar, gräver för VA och kör bort massor. Företaget har sex anställda och utgår från Gråbo.</p>
       <div class="hero-actions">
         <a class="btn" href="#kontakt">Begär offert</a>
