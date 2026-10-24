@@ -15,10 +15,10 @@ Privatpersoner och byggföretag i Lerums kommun som behöver schakt, dränering,
 De vill veta vad företaget gör, att det är seriöst, och hur man når det. Telefonen är viktigast.
 
 ## Visuellt
-- Ett typsnitt: Schibsted Grotesk. Ingen monospace.
-- En bakgrund (vit), en textfärg (#1b1d1f), en accent (signalgul #f5b400) som bara används på knappen "Begär offert" och "Skicka förfrågan".
-- Sektioner skiljs åt med tonsteg (#f1f1ee, mörk sektion), aldrig med linjer, skuggor eller gradienter.
-- Varje sektion har en egen komposition. Ingen rad med likadana kort, inga ikonrutor.
+- En typsnittsfamilj: Barlow. Barlow Condensed i versaler för rubriker, vanlig Barlow för brödtext.
+- Signalgul (#f5b400) och svart som grund, med mörkgrön (#14211b) för Om oss.
+- Sektionerna är valda av kunden ur fyra förslag var (se `forslag/`): Topp A, Tjänster B, Arbetssätt D, Om oss D, Kontakt D.
+- Varje sektion har en egen komposition.
 - Rubriker högst två rader, vanlig versalisering, inget färgat ord i rubriken.
 - Inga små versaletiketter ("eyebrows") ovanför rubriker, inga mittpunktssträngar, inga pilar på knappar.
 - Numrering bara där innehållet är en sekvens (uppdragets fyra steg).
@@ -37,6 +37,10 @@ De vill veta vad företaget gör, att det är seriöst, och hur man når det. Te
 | img/gront.jpg | [Caterpillar 320.jpg](https://commons.wikimedia.org/wiki/File:Caterpillar_320.jpg) | Bene Riobó | CC BY-SA 4.0 |
 | img/hus.jpg | [Digger outside a house in Brodalen.jpg](https://commons.wikimedia.org/wiki/File:Digger_outside_a_house_in_Brodalen.jpg) | W.carter | CC BY-SA 4.0 |
 | img/brunn.jpg | [Storm drain pipe (crop).JPG](https://commons.wikimedia.org/wiki/File:Storm_drain_pipe_(crop).JPG) | Anonimski | CC0 |
+
+## Karta
+`img/karta.jpg` är byggd av kartbilder från OpenStreetMap (zoom 12) med Lerums kommungräns från
+Nominatim inritad. Kräver attribueringen "© OpenStreetMap-bidragsgivare", som finns i bilden och i sidfoten.
 
 ## Text
 - Säg vad företaget gör och var, i första meningen. Inga slogans eller ordvitsar.
