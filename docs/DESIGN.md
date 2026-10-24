@@ -39,7 +39,9 @@ De vill veta vad företaget gör, att det är seriöst, och hur man når det. Te
 | img/brunn.jpg | [Storm drain pipe (crop).JPG](https://commons.wikimedia.org/wiki/File:Storm_drain_pipe_(crop).JPG) | Anonimski | CC0 |
 
 ## Karta
-`img/karta.jpg` är byggd av kartbilder från OpenStreetMap (zoom 12) med Lerums kommungräns från
+Kartan i Om oss är interaktiv (Leaflet 1.9.4 med OpenStreetMaps kartbilder, mörkt läge via CSS-filter) med
+Lerums kommungräns från Nominatim, förenklad och inbäddad i sidan. `img/karta.jpg` är en statisk reservbild som visas om
+kartbilderna inte kan laddas. Den är byggd av kartbilder från OpenStreetMap (zoom 12) med kommungränsen
 Nominatim inritad. Kräver attribueringen "© OpenStreetMap-bidragsgivare", som finns i bilden och i sidfoten.
 
 ## Text
