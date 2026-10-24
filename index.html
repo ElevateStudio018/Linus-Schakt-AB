@@ -5,267 +5,256 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Linus Schakt AB – schakt och markarbeten i Lerums kommun</title>
 <meta name="description" content="Linus Schakt AB gräver för husgrunder, dränerar, gräver för VA och kör massor i Lerums kommun. Sex anställda, säte i Gråbo, medlem i Maskinentreprenörerna.">
-<meta name="theme-color" content="#1b1d1f">
+<meta name="theme-color" content="#111111">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* Design: see docs/DESIGN.md. One typeface, one ground, one ink, one accent on the primary action.
-   Sections differ in composition. Separation by tone steps, no hairlines, no shadows, no gradients. */
+/* Typsnitt: Barlow-familjen överallt (Condensed för rubriker, vanlig för brödtext).
+   Sektioner: Topp A, Tjänster B, Arbetssätt D, Om oss D (riktig karta), Kontakt D. */
 :root{
   color-scheme:light;
-  --ground:#ffffff;
-  --tone:#f1f1ee;
-  --ink:#1b1d1f;
-  --ink-soft:#4a4f54;
-  --accent:#f5b400;
-  --night:#1b1d1f;
-  --night-tone:#25282b;
-  --night-soft:#b3b8bc;
-  --font:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --max:1200px;
-  --gap-section:clamp(88px,11vw,168px);
+  --ink:#111111;
+  --white:#ffffff;
+  --sand:#f4f2ee;
+  --sage:#eef1ec;
+  --forest:#14211b;
+  --forest-soft:#b9c2bb;
+  --line:#dfe5df;
+  --yellow:#f5b400;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Barlow",system-ui,sans-serif;
+  --max:1240px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--ground);color:var(--ink);font-family:var(--font);font-size:18px;line-height:1.55}
+body{font-family:var(--body);font-size:18px;line-height:1.5;color:var(--ink);background:var(--white)}
 img{display:block;max-width:100%}
-a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1.5px}
-h1,h2,h3{font-weight:800;letter-spacing:-.025em;text-wrap:balance}
-h1{font-size:clamp(40px,5.6vw,78px);line-height:.98;letter-spacing:-.035em}
-h2{font-size:clamp(32px,4vw,52px);line-height:1.02}
-h3{font-size:20px;line-height:1.25;letter-spacing:-.01em}
-p{max-width:62ch}
-.wrap{max-width:var(--max);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.9;letter-spacing:-.005em}
+.w{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.sec{padding-block:clamp(72px,9vw,110px)}
 
-.btn{display:inline-block;font:inherit;font-size:17px;font-weight:700;text-decoration:none;padding:16px 26px;background:var(--accent);color:var(--ink);border:0;cursor:pointer;transition:background-color .15s,transform .1s}
-.btn:hover{background:#ffc93c}
-.btn:active{transform:translateY(1px)}
-.link{font-weight:700}
-.link:hover{text-decoration-color:var(--accent)}
+/* ---------- Topp ---------- */
+.hero{position:relative;min-height:min(860px,100svh);color:var(--white);background:#111 url(img/hero.jpg) center/cover;display:flex;flex-direction:column}
+.hero>.w{width:100%}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(10,10,10,.55)}
+.nav{position:relative;display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:26px}
+.brand{font-family:var(--display);font-weight:800;font-size:28px;text-transform:uppercase;text-decoration:none;letter-spacing:.01em}
+.nav nav{display:flex;gap:30px;font-weight:600}
+.nav nav a{text-decoration:none;opacity:.85}
+.nav nav a:hover{opacity:1;text-decoration:underline}
+.hero-body{position:relative;margin-top:auto;padding-bottom:40px}
+.hero h1{font-size:clamp(64px,12vw,176px);line-height:.84;letter-spacing:-.01em}
+.hero p{font-size:clamp(18px,1.6vw,22px);max-width:46ch;margin-top:20px;opacity:.92}
+.bar{position:relative;display:flex;align-items:stretch;height:68px;background:var(--yellow);color:var(--ink);font-family:var(--display);font-weight:800;font-size:24px;text-transform:uppercase}
+.bar a{display:flex;align-items:center;padding:0 max(20px,env(safe-area-inset-left,0px));text-decoration:none;white-space:nowrap}
+.bar a:hover{background:#ffc93c}
+.bar i{flex:1;background:repeating-linear-gradient(-45deg,var(--ink) 0 14px,transparent 14px 28px)}
+@media (max-width:760px){.nav nav{display:none}.bar{font-size:19px}.bar i{min-width:24px}}
 
-/* header */
-header{background:var(--ground)}
-.head{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:80px}
-.brand{font-weight:800;font-size:21px;letter-spacing:-.02em;text-decoration:none}
-nav{display:flex;gap:30px;font-size:16px;font-weight:500}
-nav a{text-decoration:none;color:var(--ink-soft)}
-nav a:hover{color:var(--ink);text-decoration:underline}
-.head .tel{font-weight:700;font-size:16px;text-decoration:none;background:var(--ink);color:var(--ground);padding:11px 16px;white-space:nowrap}
-.head .tel:hover{background:var(--ink-soft)}
-@media (max-width:860px){nav{display:none}}
+/* ---------- Tjänster ---------- */
+.services{background:var(--sand)}
+.services h2,.process h2,.about h2,.contact h2{font-size:clamp(48px,7vw,96px)}
+.services h2{margin-bottom:36px}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px}
+.t{position:relative;overflow:hidden;border-radius:20px;background:var(--white);padding:26px;display:flex;flex-direction:column;justify-content:flex-end}
+.t.p{background-size:cover;background-position:center;color:var(--white)}
+.t.p::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.72))}
+.t>*{position:relative}
+.t h3{font-size:34px;line-height:.95}
+.t p{font-size:16px;margin-top:6px;opacity:.9}
+.t.big{grid-column:span 2;grid-row:span 2}.t.big h3{font-size:56px}
+.t.wide{grid-column:span 2}
+.t.y{background:var(--yellow);text-decoration:none}
+.t.y h3{font-size:44px}
+.t.y b{font-family:var(--display);font-weight:800;font-size:30px;line-height:1;margin-top:6px;white-space:nowrap}
+.t.y:hover{background:#ffc93c}
+@media (max-width:980px){.bento{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.bento{grid-template-columns:1fr;grid-auto-rows:minmax(200px,auto)}.t.big,.t.wide{grid-column:auto;grid-row:auto}.t.big{min-height:320px}}
 
-/* hero: statement on plain ground, then one dominant photo */
-.hero{padding-top:clamp(40px,7vw,96px)}
-.hero-text{display:grid;gap:28px}
-.hero-sub{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 48px}
-.hero-text p{font-size:clamp(18px,1.6vw,21px);color:var(--ink-soft)}
-.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
-.hero-photo{margin-top:clamp(40px,6vw,72px);height:clamp(320px,52vw,640px);background:var(--tone)}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+/* ---------- Arbetssätt ---------- */
+.process{background:var(--yellow)}
+.process h2{margin-bottom:48px}
+.steps{list-style:none;display:flex}
+.steps li{flex:1;background:var(--ink);color:var(--white);padding:34px 60px 34px 58px;margin-left:-28px;clip-path:polygon(0 0,calc(100% - 40px) 0,100% 50%,calc(100% - 40px) 100%,0 100%,40px 50%)}
+.steps li:first-child{margin-left:0;padding-left:34px;clip-path:polygon(0 0,calc(100% - 40px) 0,100% 50%,calc(100% - 40px) 100%,0 100%)}
+.steps li:nth-child(2){background:#262626}.steps li:nth-child(3){background:#363636}.steps li:nth-child(4){background:#474747}
+.steps span{font-family:var(--display);font-weight:700;color:var(--yellow);font-size:20px;text-transform:uppercase}
+.steps h3{font-size:40px;margin:6px 0 8px}
+.steps p{font-size:16px;color:#d2d2d2}
+@media (max-width:900px){.steps{flex-direction:column;gap:6px}.steps li,.steps li:first-child{margin-left:0;padding:26px 28px;clip-path:none}}
 
-/* services: sticky photo beside a plain list */
-.services{padding-block:var(--gap-section)}
-.services-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,6vw,96px);align-items:start}
-.services-photo{position:sticky;top:32px;aspect-ratio:4/5;background:var(--tone)}
-.services-photo img{width:100%;height:100%;object-fit:cover}
-.services h2{margin-bottom:40px}
-.svc-list{display:grid;gap:34px}
-.svc-list p{color:var(--ink-soft);margin-top:6px}
-@media (max-width:860px){.services-grid{grid-template-columns:1fr}.services-photo{position:static;aspect-ratio:3/2}}
+/* ---------- Om oss ---------- */
+.about{background:var(--forest);color:#eef0ea}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.about p{color:var(--forest-soft);margin-top:20px;max-width:46ch}
+.figs{display:flex;flex-wrap:wrap;gap:34px;margin-top:36px}
+.figs b{display:block;font-family:var(--display);font-size:60px;font-weight:800;color:var(--yellow);line-height:1}
+.figs span{font-size:15px;color:var(--forest-soft)}
+.facts{margin-top:36px;display:grid;gap:4px;max-width:520px}
+.facts div{display:flex;justify-content:space-between;gap:16px;background:#1c2c24;padding:12px 16px;font-size:16px}
+.facts dt{color:var(--forest-soft)}.facts dd{font-weight:600;text-align:right}
+.map{border-radius:8px;overflow:hidden;background:#1c2c24;aspect-ratio:1000/1313;max-height:720px;justify-self:center}
+.map img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}.map{max-height:none;width:100%}}
 
-/* good to know: field colour change, photo bleeds to the edge */
-.know{background:var(--tone);display:grid;grid-template-columns:1fr 1fr}
-.know-photo{min-height:420px;background:var(--ink)}
-.know-photo img{width:100%;height:100%;object-fit:cover}
-.know-text{padding:clamp(56px,7vw,112px) max(20px,env(safe-area-inset-right,0px),calc((100vw - var(--max))/2 + 20px)) clamp(56px,7vw,112px) clamp(32px,5vw,80px)}
-.know-text h2{margin-bottom:32px}
-.know-items{display:grid;gap:26px}
-.know-items p{color:var(--ink-soft);margin-top:6px}
-@media (max-width:860px){.know{grid-template-columns:1fr}.know-photo{min-height:0;aspect-ratio:3/2}.know-text{padding:56px max(20px,env(safe-area-inset-right,0px)) 64px max(20px,env(safe-area-inset-left,0px))}}
+/* ---------- Kontakt ---------- */
+.contact{background:var(--sage)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,6vw,64px);align-items:start}
+.contact .side p{color:#4a554e;margin-top:16px}
+.tel{display:inline-block;font-family:var(--display);font-weight:800;font-size:44px;text-decoration:none;margin-top:28px;line-height:1}
+.tel:hover{text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:4px}
+.side .mail{display:block;margin-top:8px}
+.side address{font-style:normal;margin-top:4px;color:#4a554e}
+.box{background:var(--white);padding:clamp(24px,3.5vw,40px);border-radius:6px;min-width:0}
+.prog{display:flex;gap:6px;margin-bottom:26px}
+.prog i{flex:1;height:6px;background:var(--line);transition:background-color .2s}
+.prog i.on{background:var(--yellow)}
+.step{border:0}
+.step[hidden]{display:none}
+.step legend{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:30px;margin-bottom:20px;line-height:1}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.opts label{position:relative;border:2px solid var(--line);padding:20px 16px;font-weight:700;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:border-color .15s,background-color .15s}
+.opts label:hover{border-color:#9aa59c}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts label:has(input:checked){border-color:var(--ink);background:#fff8e0}
+.opts label:has(input:focus-visible){outline:3px solid var(--yellow);outline-offset:2px}
+.opts svg{width:36px;height:36px;stroke:var(--ink);fill:none;stroke-width:2}
+.fields{display:grid;gap:16px}
+.fields label{display:grid;gap:6px;font-weight:600;font-size:16px}
+.fields input,.fields textarea{font:inherit;font-size:17px;padding:13px 14px;border:2px solid var(--line);border-radius:0;width:100%;background:var(--white);color:var(--ink)}
+.fields input:focus,.fields textarea:focus{outline:none;border-color:var(--ink)}
+.fields textarea{min-height:130px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.nav-row{margin-top:26px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.nav-row small{color:#6b746d;font-size:15px}
+.nav-row .btns{display:flex;gap:10px}
+.btn{font:inherit;font-weight:700;font-size:17px;background:var(--ink);color:var(--white);border:0;padding:15px 26px;cursor:pointer}
+.btn:hover{background:#333}
+.btn.ghost{background:transparent;color:var(--ink);text-decoration:underline}
+.btn.go{background:var(--yellow);color:var(--ink)}
+.btn.go:hover{background:#ffc93c}
+.err{color:#a3261b;font-weight:600;font-size:15px;margin-top:12px}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.opts{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}}
 
-/* process: real sequence, then a row of three photos with one crop */
-.process{padding-block:var(--gap-section)}
-.process h2{margin-bottom:44px}
-.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;counter-reset:step}
-.steps li{counter-increment:step}
-.steps li::before{content:counter(step);display:block;font-size:44px;font-weight:800;line-height:1;margin-bottom:14px;letter-spacing:-.03em}
-.steps p{color:var(--ink-soft);margin-top:6px}
-.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(56px,7vw,96px)}
-.strip div{aspect-ratio:4/3;background:var(--tone)}
-.strip img{width:100%;height:100%;object-fit:cover}
-@media (max-width:860px){.steps{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.steps{grid-template-columns:1fr}.strip{grid-template-columns:1fr}}
-
-/* company: dark field */
-.company{background:var(--night);color:var(--ground);padding-block:var(--gap-section)}
-.company-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px)}
-.company h2{margin-bottom:24px}
-.company p{color:var(--night-soft)}
-.company p+p{margin-top:16px}
-.facts{display:grid;gap:4px;align-self:start}
-.facts div{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:var(--night-tone);padding:14px 18px}
-.facts dt{color:var(--night-soft)}
-.facts dd{font-weight:700}
-@media (max-width:860px){.company-grid{grid-template-columns:1fr}}
-@media (max-width:420px){.facts div{grid-template-columns:1fr;gap:2px}}
-
-/* contact: the page ends on the action */
-.contact{padding-block:var(--gap-section)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:start}
-.contact h2{margin-bottom:20px}
-.contact p{color:var(--ink-soft)}
-.phone{display:inline-block;font-size:clamp(38px,5vw,64px);font-weight:800;letter-spacing:-.03em;line-height:1;text-decoration:none;margin-top:36px}
-.phone:hover{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:4px}
-.addr{margin-top:28px;display:grid;gap:4px}
-form{background:var(--tone);padding:clamp(24px,3.5vw,44px);display:grid;gap:18px;min-width:0}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-label{display:grid;gap:6px;font-size:16px;font-weight:700}
-input,select,textarea{font:inherit;font-size:17px;font-weight:400;color:var(--ink);background:var(--ground);border:2px solid transparent;padding:12px 14px;border-radius:0;width:100%}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ink)}
-textarea{min-height:130px;resize:vertical}
-.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
-.form-foot small{font-size:15px;color:var(--ink-soft)}
-@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
-@media (max-width:520px){.row{grid-template-columns:1fr}}
-
-footer{background:var(--night);color:var(--night-soft);font-size:15px;padding-block:36px}
-.foot{display:grid;gap:12px}
-.foot strong{color:var(--ground)}
-.credits{font-size:13px}
+footer{background:var(--ink);color:#a9a9a9;font-size:14px;padding-block:32px}
+.foot{display:grid;gap:10px}
+.foot strong{color:var(--white)}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
-<header id="hdr">
-  <div class="wrap head">
-    <a class="brand" href="#top">Linus Schakt AB</a>
-    <nav aria-label="Huvudmeny">
-      <a href="#tjanster">Tjänster</a>
-      <a href="#bra-att-veta">Bra att veta</a>
-      <a href="#foretaget">Företaget</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-    <a class="tel" href="tel:+46706616196">070-661 61 96</a>
+<section class="hero" id="top">
+  <div class="w nav">
+    <a class="brand" href="#top">Linus Schakt</a>
+    <nav aria-label="Huvudmeny"><a href="#tjanster">Tjänster</a><a href="#foretaget">Företaget</a><a href="#kontakt">Kontakt</a></nav>
   </div>
-</header>
-
-<main id="top">
-
-<section class="hero">
-  <div class="wrap hero-text">
-    <h1>Schakt och markarbeten i Lerum</h1>
-    <div class="hero-sub">
-      <p>Vi gräver för husgrunder, dränerar, gräver för VA och kör bort massor. Företaget har sex anställda och utgår från Gråbo.</p>
-      <div class="hero-actions">
-        <a class="btn" href="#kontakt">Begär offert</a>
-        <a class="link" href="tel:+46706616196">Ring 070-661 61 96</a>
-      </div>
-    </div>
+  <div class="w hero-body">
+    <h1>Schakt &amp;<br>markarbeten</h1>
+    <p>Husgrunder, dränering, VA och transporter i Lerums kommun. Sedan 2011.</p>
   </div>
-  <div class="hero-photo"><img src="img/hero.jpg" alt="Två grävmaskiner arbetar på ett grusat arbetsområde vid en skog"></div>
+  <div class="bar"><a href="#kontakt">Begär offert</a><i aria-hidden="true"></i><a href="tel:+46706616196">Ring 070-661 61 96</a></div>
 </section>
 
-<section class="services" id="tjanster">
-  <div class="wrap services-grid">
-    <div class="services-photo"><img src="img/grus.jpg" alt="Grävmaskin i ett grustag" loading="lazy"></div>
-    <div>
-      <h2>Det här gör vi</h2>
-      <div class="svc-list">
-        <div><h3>Husgrunder</h3><p>Schakt för platta på mark, plintar och källare. Vi lägger bärlager och packar inför gjutningen.</p></div>
-        <div><h3>Dränering</h3><p>Ny dränering runt befintliga hus. Vi gräver fram grunden, lägger rör och isolering och fyller igen.</p></div>
-        <div><h3>VA och dagvatten</h3><p>Grävning för vatten- och avloppsledningar, servisanslutningar och dagvattenbrunnar.</p></div>
-        <div><h3>Uppfarter och ytor</h3><p>Urschakt och bärlager för uppfarter, garageplatser och gångar.</p></div>
-        <div><h3>Transporter och material</h3><p>Vi kör bort schaktmassor och levererar grus, makadam och sand med egna eller inhyrda fordon.</p></div>
-        <div><h3>Skogskörslor</h3><p>Körning i skog åt markägare.</p></div>
-      </div>
+<main>
+
+<section class="services sec" id="tjanster">
+  <div class="w">
+    <h2>Det här gör vi</h2>
+    <div class="bento">
+      <article class="t p big" style="background-image:url(img/mark.jpg)"><h3>Husgrunder</h3><p>Schakt för platta, plintar och källare. Bärlager och packning inför gjutning.</p></article>
+      <article class="t"><h3>Dränering</h3><p>Ny dränering runt befintliga hus, med rör, isolering och återfyllnad.</p></article>
+      <article class="t p" style="background-image:url(img/brunn.jpg)"><h3>VA och dagvatten</h3><p>Vatten, avlopp och brunnar.</p></article>
+      <a class="t y" href="tel:+46706616196"><h3>Ring oss</h3><b>070-661 61 96</b><p>Fråga om ditt jobb.</p></a>
+      <article class="t"><h3>Uppfarter</h3><p>Urschakt och bärlager för uppfarter, garageplatser och gångar.</p></article>
+      <article class="t p wide" style="background-image:url(img/grus.jpg)"><h3>Transporter och material</h3><p>Bortforsling av massor, leverans av grus, makadam och sand.</p></article>
+      <article class="t p wide" style="background-image:url(img/gront.jpg)"><h3>Skogskörslor</h3><p>Körning i skog åt markägare.</p></article>
     </div>
   </div>
 </section>
 
-<section class="know" id="bra-att-veta">
-  <div class="know-photo"><img src="img/hus.jpg" alt="Grävmaskin parkerad vid ett rött trähus" loading="lazy"></div>
-  <div class="know-text">
-    <h2>Bra att veta innan du gräver</h2>
-    <div class="know-items">
-      <div><h3>ROT-avdrag för dränering</h3><p>Dränering runt ett befintligt bostadshus räknas som ROT-arbete. Avdraget gäller arbetskostnaden.</p></div>
-      <div><h3>Kablar och rör i marken</h3><p>Ledningar ska lokaliseras innan grävningen börjar. Ärendet läggs via <a href="https://www.ledningskollen.se">Ledningskollen.se</a>.</p></div>
-      <div><h3>Marklov</h3><p>Schakt eller fyllning som ändrar markens höjd mycket kan kräva marklov. Lerums kommun svarar på vad som gäller för din tomt.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="process">
-  <div class="wrap">
-    <h2>Så går ett uppdrag till</h2>
+<section class="process sec">
+  <div class="w">
+    <h2>Fyra steg<br>till färdig mark</h2>
     <ol class="steps">
-      <li><h3>Förfrågan</h3><p>Du ringer eller skickar formuläret längre ner.</p></li>
-      <li><h3>Platsbesök</h3><p>Vi tittar på tomten, tillfarten och marken.</p></li>
-      <li><h3>Offert</h3><p>Du får pris och tidplan skriftligt.</p></li>
-      <li><h3>Utförande</h3><p>Vi gräver, fyller igen och lämnar ytan klar för nästa hantverkare.</p></li>
+      <li><span>Steg 1</span><h3>Förfrågan</h3><p>Du ringer eller skickar formuläret.</p></li>
+      <li><span>Steg 2</span><h3>Platsbesök</h3><p>Vi tittar på tomten, tillfarten och marken.</p></li>
+      <li><span>Steg 3</span><h3>Offert</h3><p>Du får pris och tidplan skriftligt.</p></li>
+      <li><span>Steg 4</span><h3>Utförande</h3><p>Vi gräver, fyller igen och lämnar ytan klar.</p></li>
     </ol>
-    <div class="strip">
-      <div><img src="img/brunn.jpg" alt="Nyinstallerad dagvattenbrunn i en schaktgrop" loading="lazy"></div>
-      <div><img src="img/mark.jpg" alt="Bandgående grävmaskin på en byggarbetsplats med grus och rör" loading="lazy" style="object-position:30% 80%"></div>
-      <div><img src="img/gront.jpg" alt="Grävmaskin bland träd och sly" loading="lazy"></div>
-    </div>
   </div>
 </section>
 
-<section class="company" id="foretaget">
-  <div class="wrap company-grid">
+<section class="about sec" id="foretaget">
+  <div class="w about-grid">
     <div>
-      <h2>Om företaget</h2>
-      <p>Linus Schakt AB startade 2011 och har sitt säte i Gråbo i Lerums kommun.</p>
-      <p>Vi är medlemmar i Maskinentreprenörerna sedan 2012 och har kollektivavtal för både maskinförare och tjänstemän.</p>
+      <h2>Hemma i<br>Lerums kommun</h2>
+      <p>Vi utgår från Gråbo och jobbar i kommunen med omnejd. Företaget startade 2011, är medlem i Maskinentreprenörerna sedan 2012 och har kollektivavtal för maskinförare och tjänstemän.</p>
+      <div class="figs"><div><b>2011</b><span>Grundat</span></div><div><b>6</b><span>Anställda</span></div><div><b>7</b><span>Fordon</span></div></div>
+      <dl class="facts">
+        <div><dt>Organisationsnummer</dt><dd>556863-1179</dd></div>
+        <div><dt>Omsättning 2024/25</dt><dd>10,3 miljoner kronor</dd></div>
+        <div><dt>Kollektivavtal</dt><dd>Entreprenadmaskinavtalet</dd></div>
+      </dl>
     </div>
-    <dl class="facts">
-      <div><dt>Organisationsnummer</dt><dd>556863-1179</dd></div>
-      <div><dt>Registrerat</dt><dd>31 augusti 2011</dd></div>
-      <div><dt>Anställda</dt><dd>6</dd></div>
-      <div><dt>Fordon</dt><dd>7</dd></div>
-      <div><dt>Omsättning 2024/25</dt><dd>10,3 miljoner kronor</dd></div>
-      <div><dt>Kollektivavtal</dt><dd>Entreprenadmaskinavtalet</dd></div>
-    </dl>
+    <figure class="map"><img src="img/karta.jpg" alt="Karta över Lerums kommun med kommungränsen markerad och Gråbo utmärkt" loading="lazy"></figure>
   </div>
 </section>
 
-<section class="contact" id="kontakt">
-  <div class="wrap contact-grid">
-    <div>
-      <h2>Begär offert</h2>
-      <p>Beskriv jobbet och var det ligger. Har du ritningar eller foton kan du mejla dem till oss.</p>
-      <a class="phone" href="tel:+46706616196">070-661 61 96</a>
-      <div class="addr">
-        <a href="mailto:linusschaktab@me.com">linusschaktab@me.com</a>
-        <span>Rättarns väg 7, 443 73 Gråbo</span>
-      </div>
+<section class="contact sec" id="kontakt">
+  <div class="w contact-grid">
+    <div class="side">
+      <h2>Begär<br>offert</h2>
+      <p>Tre korta steg. Det tar en minut.</p>
+      <a class="tel" href="tel:+46706616196">070-661 61 96</a>
+      <a class="mail" href="mailto:linusschaktab@me.com">linusschaktab@me.com</a>
+      <address>Rättarns väg 7, 443 73 Gråbo</address>
     </div>
-    <form id="offert">
-      <div class="row">
-        <label for="f-namn">Namn<input id="f-namn" name="namn" required autocomplete="name"></label>
-        <label for="f-tel">Telefon<input id="f-tel" name="telefon" type="tel" required autocomplete="tel"></label>
+    <form class="box" id="offert" novalidate>
+      <div class="prog" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      <fieldset class="step" data-step="1">
+        <legend>1. Vad behöver du hjälp med?</legend>
+        <div class="opts">
+          <label><input type="radio" name="typ" value="Husgrund"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M4 28h28M8 28V16l10-7 10 7v12"/></svg>Husgrund</label>
+          <label><input type="radio" name="typ" value="Dränering"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M4 26h28M8 20c4 4 16 4 20 0"/></svg>Dränering</label>
+          <label><input type="radio" name="typ" value="VA och dagvatten"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M6 10h10v16h14"/></svg>VA och dagvatten</label>
+          <label><input type="radio" name="typ" value="Uppfart"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M4 30L14 6h8l10 24"/></svg>Uppfart</label>
+          <label><input type="radio" name="typ" value="Transporter och material"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M3 24V12h18v12M21 16h7l5 5v3H21"/></svg>Transporter</label>
+          <label><input type="radio" name="typ" value="Skogskörsla"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 4l8 12h-5l6 10H9l6-10h-5z"/></svg>Skog</label>
+        </div>
+      </fieldset>
+      <fieldset class="step" data-step="2" hidden>
+        <legend>2. Var och vad?</legend>
+        <div class="fields">
+          <label for="f-plats">Adress eller ort<input id="f-plats" name="plats" placeholder="t.ex. Gråbo"></label>
+          <label for="f-besk">Beskriv jobbet<textarea id="f-besk" name="beskrivning" placeholder="Ungefärlig yta, tillfart, när du vill att jobbet görs"></textarea></label>
+        </div>
+      </fieldset>
+      <fieldset class="step" data-step="3" hidden>
+        <legend>3. Hur når vi dig?</legend>
+        <div class="fields">
+          <div class="two">
+            <label for="f-namn">Namn<input id="f-namn" name="namn" autocomplete="name"></label>
+            <label for="f-tel">Telefon<input id="f-tel" name="telefon" type="tel" autocomplete="tel"></label>
+          </div>
+          <label for="f-mail">E-post (frivilligt)<input id="f-mail" name="epost" type="email" autocomplete="email"></label>
+        </div>
+      </fieldset>
+      <p class="err" id="f-err" hidden></p>
+      <div class="nav-row">
+        <small id="f-count">Steg 1 av 3</small>
+        <div class="btns">
+          <button type="button" class="btn ghost" id="f-back" hidden>Tillbaka</button>
+          <button type="button" class="btn" id="f-next">Nästa</button>
+          <button type="submit" class="btn go" id="f-send" hidden>Skicka förfrågan</button>
+        </div>
       </div>
-      <label for="f-ort">Adress eller ort<input id="f-ort" name="plats"></label>
-      <label for="f-typ">Typ av jobb
-        <select id="f-typ" name="typ">
-          <option>Husgrund</option>
-          <option>Dränering</option>
-          <option>VA och dagvatten</option>
-          <option>Uppfart eller yta</option>
-          <option>Transporter och material</option>
-          <option>Skogskörsla</option>
-          <option>Annat</option>
-        </select>
-      </label>
-      <label for="f-besk">Beskrivning<textarea id="f-besk" name="beskrivning"></textarea></label>
-      <div class="form-foot">
-        <button class="btn" type="submit">Skicka förfrågan</button>
-        <small id="f-note">Ditt e-postprogram öppnas med förfrågan ifylld.</small>
-      </div>
+      <p class="nav-row" style="margin-top:14px"><small id="f-note">Ditt e-postprogram öppnas med förfrågan ifylld.</small></p>
     </form>
   </div>
 </section>
@@ -273,19 +262,48 @@ footer{background:var(--night);color:var(--night-soft);font-size:15px;padding-bl
 </main>
 
 <footer>
-  <div class="wrap foot">
+  <div class="w foot">
     <span><strong>Linus Schakt AB</strong>, org.nr 556863-1179, Rättarns väg 7, 443 73 Gråbo</span>
-    <span class="credits">Foton via Wikimedia Commons: Calle Eklund (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>), W.carter och Bene Riobó (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>), Anonimski (CC0).</span>
+    <span>Foton via Wikimedia Commons: Calle Eklund (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>), W.carter och Bene Riobó (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>), Anonimski (CC0). Karta: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-bidragsgivare</a>.</span>
   </div>
 </footer>
 
 <script>
-document.getElementById('offert').addEventListener('submit', e => {
-  e.preventDefault();
-  const f = new FormData(e.target);
-  const body = [...f.entries()].map(([k, v]) => k.charAt(0).toUpperCase() + k.slice(1) + ': ' + (v || '-')).join('\n');
-  location.href = 'mailto:linusschaktab@me.com?subject=' + encodeURIComponent('Offertförfrågan: ' + f.get('typ')) + '&body=' + encodeURIComponent(body);
-});
+(() => {
+  const form = document.getElementById('offert');
+  const steps = [...form.querySelectorAll('.step')];
+  const bars = [...form.querySelectorAll('.prog i')];
+  const back = document.getElementById('f-back'), next = document.getElementById('f-next'), send = document.getElementById('f-send');
+  const count = document.getElementById('f-count'), err = document.getElementById('f-err');
+  let cur = 0;
+  const show = i => {
+    cur = i;
+    steps.forEach((s, k) => s.hidden = k !== i);
+    bars.forEach((b, k) => b.classList.toggle('on', k <= i));
+    back.hidden = i === 0; next.hidden = i === steps.length - 1; send.hidden = i !== steps.length - 1;
+    count.textContent = 'Steg ' + (i + 1) + ' av ' + steps.length;
+    err.hidden = true;
+  };
+  const check = i => {
+    if (i === 0 && !form.typ.value) return 'Välj vad du behöver hjälp med.';
+    if (i === 2 && (!form.namn.value.trim() || !form.telefon.value.trim())) return 'Fyll i namn och telefon så att vi kan ringa upp.';
+    return '';
+  };
+  next.addEventListener('click', () => {
+    const m = check(cur);
+    if (m) { err.textContent = m; err.hidden = false; return; }
+    show(cur + 1);
+  });
+  back.addEventListener('click', () => show(cur - 1));
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const m = check(cur);
+    if (m) { err.textContent = m; err.hidden = false; return; }
+    const f = new FormData(form);
+    const body = [...f.entries()].map(([k, v]) => k.charAt(0).toUpperCase() + k.slice(1) + ': ' + (v || '-')).join('\n');
+    location.href = 'mailto:linusschaktab@me.com?subject=' + encodeURIComponent('Offertförfrågan: ' + f.get('typ')) + '&body=' + encodeURIComponent(body);
+  });
+})();
 </script>
 </body>
 </html>
